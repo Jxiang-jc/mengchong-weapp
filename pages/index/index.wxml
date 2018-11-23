@@ -1,0 +1,24 @@
+<view class="map-container">
+
+  <map
+    id="map"
+    class="map"
+    longitude="{{longitude}}"
+    latitude="{{latitude}}"
+    scale="14"
+    controls="{{controls}}"
+    bindcontroltap="controltap"
+    show-location>
+  </map>
+</view>
+
+<view class="btns">
+  <view class="btn btn-publish">
+    <navigator url="/pages/publish/publish">
+      发布
+    </navigator>
+  </view>
+  <view class="btn">
+    搜索
+  </view>
+</view>

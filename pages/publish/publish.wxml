@@ -1,0 +1,33 @@
+<view>
+  <view class="row">
+    <label class="title">我的地址</label>
+    <view class="info">点击选择，要勾选噢</view>
+  </view>
+  <view class="row">
+    <label class="title">类型</label>
+    <view class="info">
+      <radio-group>
+        <label>
+          <radio value="1" checked="true"/>求购
+          <radio value="2" checked="false"/>转让
+        </label>
+      </radio-group>
+    </view>
+  </view>
+  <view class="row">
+    <label class="title">说明</label>
+    <view class="info">
+      <input class="info-input" placeholder="填写您的具体要求" auto-focus/>
+    </view>
+  </view>
+  <view class="row">
+    <label class="title">联系方式</label>
+    <view class="info">
+      <input class="info-input" placeholder="填写您的联系方式" auto-focus/>
+    </view>
+  </view>
+  <view class="submit-button">
+    发布信息
+  </view>
+</view>
+
