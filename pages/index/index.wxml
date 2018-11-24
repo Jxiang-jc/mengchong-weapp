@@ -8,6 +8,8 @@
     scale="14"
     controls="{{controls}}"
     bindcontroltap="controltap"
+    markers="{{markers}}"
+    bindmarkertap="markertap"
     show-location>
   </map>
 </view>

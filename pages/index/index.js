@@ -6,6 +6,7 @@ Page({
   data: {
     longitude: '',
     latitude: '',
+    markers: [],
     controls: [{
       iconPath: '/resources/icon-location.png',
       position: {
@@ -33,12 +34,32 @@ Page({
   },
   onShow () {
     this.getLoaction()
+    this.getStorageInfo()
   },
   getLoaction () {
     wx.getLocation({
       type: 'gcj02',
       success: this.handleGetLoactionSucc.bind(this)
     })
+  },
+  getStorageInfo () {
+    var logs = wx.getStorageSync('info') || [] // 获取本地内存里面的信息,无则为空数组
+    // console.log(777, logs)/
+    if (logs.length > 0) {
+      const markers = logs.map((item, idx) => {
+        return {
+          iconPath: "/resources/" + item.type + ".png",
+          id: item.idx,
+          latitude: item.latitude,
+          longitude: item.longitude,
+          width: 35,
+          height: 35
+        }
+      })
+      this.setData({
+        markers: markers
+      })
+    }
   },
 
   handleGetLoactionSucc (res) { 
@@ -52,15 +73,21 @@ Page({
   controltap(e) { // 地图控件要触发点击事件的话，需要把电脑显示缩放比例改为100%
     this.mapCtx.moveToLocation()
   },
+  markertap (e) {
+    console.log(e)
+    wx.navigateTo({ // 点击mark跳转详情页面
+      url: '/pages/details/details?id='+ e.markerId
+    })
+  },
 
-  onShareAppMessage: function (res) {
+  onShareAppMessage: function (res) { // 转发
     if (res.from === 'button') {
       // 来自页面内转发按钮
       console.log(res.target)
     }
     return {
       title: '萌宠交易平台',
-      path: '/page/index/index'
+      path: '/pages/index/index'
     }
   }
 })

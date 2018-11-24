@@ -24,5 +24,18 @@ page {
   padding-left:20rpx;
 }
 .info-input{
-  height: 100rpx;
+  height:100rpx;
+  line-height:100rpx;
+}
+.success {
+  background: #fff;
+  padding-bottom: 40rpx;
+}
+.congratulation {
+  text-align: center;
+  line-height: 200rpx;
+  font-size: 40rpx;
+}
+.backhome-button{
+  margin: 0 40rpx;
 }
