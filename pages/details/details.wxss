@@ -1,3 +1,6 @@
+
+@import "../../components/header/header.wxss";
+
 page {
     background: #eee;
   }

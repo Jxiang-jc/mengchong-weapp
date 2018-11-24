@@ -1,0 +1,2 @@
+<!--components/header.wxml-->
+<view class='headerBg'>{{header-content}}</view>

@@ -25,5 +25,6 @@
   </view>
 </view>
 
+<include src="../../components/header/header.wxml" />
 
  

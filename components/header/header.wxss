@@ -1,0 +1,4 @@
+/* components/header.wxss */
+.headerBg{
+    background: #58bc58;
+}

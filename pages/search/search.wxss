@@ -1,0 +1,40 @@
+/* pages/search.wxss */
+page{
+    background: #eee;
+}
+.search-header {
+    position: relative;
+    height: 74rpx;
+    background: #03bbd5;
+    padding-top:14rpx
+}
+.search-input {
+    background:#fff;
+    margin:0 120rpx 0 20rpx;
+    padding: 0 10rpx;
+    height: 60rpx;
+    border-radius: 5px;
+}
+.search-btn {
+    position: absolute;
+    right:0;
+    top:0;
+    color: #fff;
+    width: 120rpx;
+    height: 88rpx;
+    line-height:88rpx;
+    text-align:center;
+}
+.item-address {
+    width:100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    color:#f70;
+    font-size:32rpx;
+}
+.item {
+    background: #fff;
+    margin-bottom:20rpx;
+    padding:20rpx;
+}
